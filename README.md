@@ -26,4 +26,15 @@ FROM orders
 GROUP BY order_id;"
 
 
+#3. Compare the EDA performance between sql queries and python or R EDA syntaxes ? 
+
+e.g in the orders table from this project if you run below query it almost takes 25 min to see the result. but in python or r it is like a seconds : 
+
+sql query : 
+
+"SELECT order_id, MAX(order_dow)
+FROM orders
+GROUP BY order_id;"
+
+
 

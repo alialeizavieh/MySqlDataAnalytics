@@ -36,5 +36,5 @@ sql query :
 FROM orders
 GROUP BY order_id;"
 
-usually the aggreagate functions in sql take time to be run. 
+usually the aggreagate functions in sql take time to be run. in this exampl on almost 1.5 million rows takes long time. 
 

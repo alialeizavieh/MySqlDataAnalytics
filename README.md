@@ -19,4 +19,11 @@ FROM product_subsets
 WHERE NOT EXISTS (
 SELECT aisles.aisle_id FROM aisles WHERE product_subsets.aisle_id = aisles.aisle_id)"
 
+#2. How to select only rows with max value in a columns? 
+
+"SELECT order_id, MAX(order_dow)
+FROM orders
+GROUP BY order_id;"
+
+
 

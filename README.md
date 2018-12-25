@@ -49,3 +49,16 @@ ON
 product_subsets.product_id=order_product_prior.product_id WHERE order_product_prior.reordered = 1 group by product_subsets.product_id 
 order by cnt DESC LIMIT 10
 "
+
+
+#5. Query for Retrieving Tables ?
+
+" SHOW tables "
+
+#6. Query for Outputting Data Using a Constraint ?
+
+I used "select * from departments where department = 'frozen'" as the record exists but the query has no result. i tried the query with 'like' operator and the query returned the result and i found out there should be some spaces in the data. 
+
+" select * from departments where department like "%frozen%" "
+
+

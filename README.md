@@ -38,3 +38,14 @@ GROUP BY order_id;"
 
 usually the aggreagate functions in sql take time to be run. in this exampl on almost 1.5 million rows takes long time. 
 
+
+#4. Which products has been reordered most ? 
+
+"
+SELECT product_subsets.product_id,product_subsets.product_name,count(order_product_prior.reordered) as cnt from product_subsets 
+INNER JOIN 
+order_product_prior 
+ON 
+product_subsets.product_id=order_product_prior.product_id WHERE order_product_prior.reordered = 1 group by product_subsets.product_id 
+order by cnt DESC LIMIT 10
+"

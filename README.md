@@ -131,6 +131,25 @@ order by order_dow DESC
 
 "
 
+#11. Data Manupulation using Sum,Count : 
+
+"
+select user_id, Sum(days_since_prior_order) as sum 
+from retail.orders group by user_id order by sum DESC
+
+"
+ 
+ or to see how many times each user gor for shopping each 10 days : 
+
+
+
+"
+select user_id,count(user_id) as cnt
+from retail.orders where days_since_prior_order between 0 and 10 group by user_id
+
+
+"
+
 
 
 

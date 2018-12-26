@@ -200,5 +200,9 @@ SELECT * FROM Sys.Objects WHERE Type='p'
 "
 
 
+#14. Swapping the Values of Two Columns in a table ?
 
+"
+UPDATE Customers SET Zip=Phone, Phone=Zip   
+"
 

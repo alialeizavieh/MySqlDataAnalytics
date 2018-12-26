@@ -172,3 +172,33 @@ select * from purchasing_each_10days
 
 
 
+#13. query to display user tables,primary key,foriegn ke,unique key, : 
+
+
+"
+SELECT * FROM Sys.objects WHERE Type='u'
+"
+
+"
+SELECT * from Sys.Objects WHERE Type='PK'
+"
+
+
+"
+SELECT * FROM Sys.Objects WHERE Type='uq'
+"
+    
+"    
+SELECT * FROM Sys.Objects WHERE Type='f'
+"
+"
+SELECT * FROM Sys.Objects WHERE Type='tr'
+"
+
+"
+SELECT * FROM Sys.Objects WHERE Type='p'
+"
+
+
+
+

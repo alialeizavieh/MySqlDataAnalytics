@@ -62,3 +62,48 @@ I used "select * from departments where department = 'frozen'" as the record exi
 " select * from departments where department like "%frozen%" "
 
 
+#6. How To clean data if there white spaces after and before data ? or any tab or any break line? 
+
+ for white space : "UPDATE `table` SET `col_name` = REPLACE(`col_name`, ' ', '')"
+ 
+ for tab : "UPDATE `table` SET `col_name` = REPLACE(`col_name`, '\t', '' )"
+ 
+ remove space at first and last characters : "UPDATE `table` SET `col_name` = TRIM(`col_name`)"
+ 
+ 
+ 
+#.7 Query for Outputting Sorted Data Using ‘Order By’ ?
+
+"select * from orders where order_dow = 2 order by order_hour_of_day DESC"
+"select order_hour_of_day,count(order_hour_of_day) as cnt from orders group by order_hour_of_day order by cnt DESC"
+
+
+#8.How long this costumers has been loyal to this retail store ? 
+
+"select user_id,sum(days_since_prior_order) as LoyaltyDays from orders group by user_id order by loyaltyDays DESC"
+
+
+#.8 Subqueries : 
+
+"select max(LoyaltyDays),Min(LoyaltyDays),Avg(LoyaltyDays)
+from
+(select user_id,sum(days_since_prior_order) as LoyaltyDays 
+from retail.orders 
+group by user_id 
+order by LoyaltyDays ASC)"
+
+i performed this query but recivied this error : Every derived table must have its own alias. 
+it means every drived table(AKA subquery table) must have and alias Therefor i changed it to :
+
+"select max(LoyaltyDays),Min(LoyaltyDays),Avg(LoyaltyDays)
+from
+(select user_id,sum(days_since_prior_order) as LoyaltyDays 
+from retail.orders 
+group by user_id 
+order by LoyaltyDays ASC) As sub1" 
+
+and it works!
+
+
+
+

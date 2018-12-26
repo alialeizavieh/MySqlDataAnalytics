@@ -206,3 +206,28 @@ SELECT * FROM Sys.Objects WHERE Type='p'
 UPDATE Customers SET Zip=Phone, Phone=Zip   
 "
 
+#.15 Returning a Column of Unique Values ?
+
+"
+select distinct(order_id) from retail.orders 
+
+"
+
+
+
+#16. Making a Top 25 with the SELECT TOP Clause : 
+
+" 
+select TOP 25 from retail.orders where order_id <> NULL
+
+" 
+
+
+
+#17. Fiding intersection of two tables : 
+
+"
+SELECT ID FROM Customers INNER
+JOIN Orders ON Customers.ID = Orders.ID
+
+"

@@ -119,6 +119,18 @@ where LoyaltyDays  between 90 and 270"
 
 
 
+#10. find Min and Max in each group of days of wee ( order_dow) ?
+
+"
+
+
+select order_dow,min(days_since_prior_order),max(days_since_prior_order)
+from retail.orders 
+group by order_dow 
+order by order_dow DESC
+
+"
+
 
 
 

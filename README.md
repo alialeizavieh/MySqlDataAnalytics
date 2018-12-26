@@ -150,6 +150,25 @@ from retail.orders where days_since_prior_order between 0 and 10 group by user_i
 
 "
 
+#12. Creating View for above question  : 
+
+"
+create view purchasing_Each_10days as 
+select user_id,count(user_id) as cnt
+from retail.orders 
+where 
+days_since_prior_order between 0 and 10 
+group by user_id
+
+"
+
+and retreive the information from this view : 
+
+"
+select * from purchasing_each_10days 
+
+"
+
 
 
 

@@ -104,6 +104,21 @@ order by LoyaltyDays ASC) As sub1"
 
 and it works!
 
+#.9 How long is the loyalty of each user in the retail dataset ? 
+
+Solution : how do you define loyalty ? from this data loyalty is the sum of the all values of days_since_prior_order for each user_id would be total days the user id has been involved to purchase from this retail store.The query and subquery for fetching this data is : 
+
+"select count(*)
+from
+(select user_id,sum(days_since_prior_order) as LoyaltyDays 
+from retail.orders 
+group by user_id 
+order by LoyaltyDays ASC) as LoyltyDays
+where LoyaltyDays  between 90 and 270"
+
+
+
+
 
 
 

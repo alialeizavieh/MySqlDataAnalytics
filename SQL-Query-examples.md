@@ -251,3 +251,9 @@ if you want to change the columns type :
 "select DATEDIFF(return_date,rental_date) from rental"
 
 
+#20. Get names of employees from employee table who has '%' in Last_Name. Tip : Escape character for special characters in a query : 
+
+
+"Select FIRST_NAME from employee where Last_Name like '%\%%'"
+
+

@@ -246,3 +246,8 @@ if you want to change the columns type :
 "update rental set month = month(rental_date)"
 
 
+#19. How to calculate diffrence between dates : 
+
+"select DATEDIFF(return_date,rental_date) from rental"
+
+

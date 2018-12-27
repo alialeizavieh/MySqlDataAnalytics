@@ -279,3 +279,8 @@ group by year(rental_date),month(rental_date) order by cnt DESC
 Select DEPARTMENT,sum(SALARY) Total_Salary from employee group by DEPARTMENT having sum(SALARY) >800000 order by Total_Salary desc
 "
 
+#23. Select employee details from employee table if data exists in incentive table ?
+
+"
+select * from EMPLOYEE where exists (select * from INCENTIVES)
+"

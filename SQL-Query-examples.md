@@ -264,3 +264,11 @@ if you want to change the columns type :
 Select DEPARTMENT,count(FIRST_NAME),sum(SALARY) Total_Salary from employee group by DEPARTMENT order by Total_Salary descending
 
 "
+
+#21. Select no of rental Id with respect to year and month from rental table :
+
+"
+select year(rental_date),month(rental_date),count(rental_id) as cnt 
+from rental 
+group by year(rental_date),month(rental_date) order by cnt DESC
+"

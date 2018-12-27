@@ -291,3 +291,10 @@ select * from EMPLOYEE where exists (select * from INCENTIVES)
 "
 select * from EMPLOYEE where EMPLOYEE_ID INTERSECT select * from EMPLOYEE where EMPLOYEE_ID < 4
 "
+
+#25. Get Employee ID's of those employees who didn't receive incentives without using sub query ?
+"
+select EMPLOYEE_ID from EMPLOYEE
+MINUS
+select EMPLOYEE_REF_ID from INCENTIVES
+"

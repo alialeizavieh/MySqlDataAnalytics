@@ -231,3 +231,18 @@ SELECT ID FROM Customers INNER
 JOIN Orders ON Customers.ID = Orders.ID
 
 "
+
+
+#18. How to add columns to the current table :
+
+"alter table rental add month date"
+
+if you want to change the columns type : 
+
+"alter table rental modify month int(10)"
+
+#19. How to update new added column by only insert the month data extracted from another columns holding full date information :
+
+"update rental set month = month(rental_date)"
+
+

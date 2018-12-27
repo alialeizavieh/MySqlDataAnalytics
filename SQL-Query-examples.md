@@ -284,3 +284,10 @@ Select DEPARTMENT,sum(SALARY) Total_Salary from employee group by DEPARTMENT hav
 "
 select * from EMPLOYEE where exists (select * from INCENTIVES)
 "
+
+#24. How to fetch data that are common in two query results ? 
+
+
+"
+select * from EMPLOYEE where EMPLOYEE_ID INTERSECT select * from EMPLOYEE where EMPLOYEE_ID < 4
+"

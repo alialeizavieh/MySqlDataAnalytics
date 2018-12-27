@@ -257,3 +257,10 @@ if you want to change the columns type :
 "Select FIRST_NAME from employee where Last_Name like '%\%%'"
 
 
+#21. Get department,no of employees in a department,total salary with respect to a department from employee table order by total salary descending :
+
+"
+
+Select DEPARTMENT,count(FIRST_NAME),sum(SALARY) Total_Salary from employee group by DEPARTMENT order by Total_Salary descending
+
+"

@@ -272,3 +272,10 @@ select year(rental_date),month(rental_date),count(rental_id) as cnt
 from rental 
 group by year(rental_date),month(rental_date) order by cnt DESC
 "
+
+#22. have a condition on group by : Select department,total salary with respect to a department from employee table where total salary greater than 800000 order by Total_Salary descending :
+
+"
+Select DEPARTMENT,sum(SALARY) Total_Salary from employee group by DEPARTMENT having sum(SALARY) >800000 order by Total_Salary desc
+"
+

@@ -401,3 +401,13 @@ ALTER TABLE INCENTIVES drop CONSTRAINT INCENTIVES_FK;
 "
 
 
+#32. How to copy data into new table with where cluase : 
+
+"
+SELECT *
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition; 
+
+
+"

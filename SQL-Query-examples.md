@@ -325,4 +325,9 @@ Select * from EMPLOYEE where lower(LAST_NAME)=upper(LAST_NAME)
 Explanation : In order to achieve the desired result, we use "ASCII" property of the database. If we get results for a column using Lower and Upper commands, ASCII of both results will be same for numbers. If there is any alphabets in the column, results will differ.
 
 
+#29.Update incentive table where employee name is 'John' ?
 
+"
+update INCENTIVES set INCENTIVE_AMOUNT='9000' where EMPLOYEE_REF_ID=(select EMPLOYEE_ID from EMPLOYEE where FIRST_NAME='John' )
+
+"

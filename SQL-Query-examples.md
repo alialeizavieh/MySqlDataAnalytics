@@ -298,3 +298,28 @@ select EMPLOYEE_ID from EMPLOYEE
 MINUS
 select EMPLOYEE_REF_ID from INCENTIVES
 "
+
+#26. Select Banking as 'Bank Dept', Insurance as 'Insurance Dept' and Services as 'Services Dept' from employee table :
+
+"
+SELECT case DEPARTMENT when 'Banking' then 'Bank Dept' when 'Insurance' then 'Insurance Dept' when 'Services' then 'Services Dept' end FROM EMPLOYEE
+"
+
+#27. Delete employee data from employee table who got incentives in incentive table :
+
+"
+delete from EMPLOYEE where EMPLOYEE_ID in (select EMPLOYEE_REF_ID from INCENTIVES)
+
+"
+
+
+#28. Select Last Name from employee table which contain only numbers :
+
+"
+Select * from EMPLOYEE where lower(LAST_NAME)=upper(LAST_NAME)
+"
+
+Explanation : In order to achieve the desired result, we use "ASCII" property of the database. If we get results for a column using Lower and Upper commands, ASCII of both results will be same for numbers. If there is any alphabets in the column, results will differ.
+
+
+

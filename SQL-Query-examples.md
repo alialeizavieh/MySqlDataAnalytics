@@ -346,3 +346,56 @@ Select FIRST_NAME,INCENTIVE_AMOUNT from employee a inner join incentives B on A.
 Select FIRST_NAME, IFNULL(INCENTIVE_AMOUNT,0) from employee a left join incentives B on A.EMPLOYEE_ID=B.EMPLOYEE_REF_ID
 "
 
+#31. Create,Alter,Remove ... :
+
+"
+CREATE TABLE EMPLOYEE(
+EMPLOYEE_ID int NOT NULL,
+FIRST_NAME varchar(50) NULL,
+LAST_NAME varchar(50) NULL,
+SALARY decimal(18, 0) NULL,
+JOINING_DATE datetime2(7) default getdate(),
+DEPARTMENT varchar(50) NULL)
+
+"
+
+
+
+"
+DROP table employee;
+
+"
+
+
+
+"
+ALTER TABLE EMPLOYEE add CONSTRAINT EMPLOYEE_PK PRIMARY KEY(EMPLOYEE_ID)
+"
+
+
+Write syntax to set 2 fields(EMPLOYEE_ID,FIRST_NAME) as primary key in employee table :
+
+"
+ALTER TABLE EMPLOYEE add CONSTRAINT EMPLOYEE_PK PRIMARY KEY(EMPLOYEE_ID,FIRST_NAME)
+
+"
+
+
+"
+Alter TABLE EMPLOYEE drop CONSTRAINT EMPLOYEE_PK;
+"
+
+
+"
+ALTER TABLE INCENTIVES ADD CONSTRAINT INCENTIVES_FK FOREIGN KEY (EMPLOYEE_REF_ID) REFERENCES EMPLOYEE(EMPLOYEE_ID)
+
+"
+
+
+
+"
+ALTER TABLE INCENTIVES drop CONSTRAINT INCENTIVES_FK;
+
+"
+
+

@@ -1,5 +1,6 @@
 # MySqlDataAnalytics
 Application of Mysql and Sql in Data Analytics
+
 Recources  : http://a4academics.com/interview-questions/53-database-and-sql/397-top-100-database-sql-interview-questions-and-answers-examples-queries?showall=&start=4
 
 

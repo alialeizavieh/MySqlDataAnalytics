@@ -331,3 +331,18 @@ Explanation : In order to achieve the desired result, we use "ASCII" property of
 update INCENTIVES set INCENTIVE_AMOUNT='9000' where EMPLOYEE_REF_ID=(select EMPLOYEE_ID from EMPLOYEE where FIRST_NAME='John' )
 
 "
+
+#29. Select first_name, incentive amount from employee and incentives table for those employees who have incentives and incentive amount greater than 3000  :
+
+"
+Select FIRST_NAME,INCENTIVE_AMOUNT from employee a inner join incentives B on A.EMPLOYEE_ID=B.EMPLOYEE_REF_ID and INCENTIVE_AMOUNT >3000
+
+"
+
+
+#30.Select first_name, incentive amount from employee and incentives table for all employees even if they didn't get incentives and set incentive amount as 0 for those employees who didn't get incentives :
+
+"
+Select FIRST_NAME, IFNULL(INCENTIVE_AMOUNT,0) from employee a left join incentives B on A.EMPLOYEE_ID=B.EMPLOYEE_REF_ID
+"
+

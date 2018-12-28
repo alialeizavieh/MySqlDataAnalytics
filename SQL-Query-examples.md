@@ -3,6 +3,8 @@ Application of Mysql and Sql in Data Analytics
 
 Recources  : http://a4academics.com/interview-questions/53-database-and-sql/397-top-100-database-sql-interview-questions-and-answers-examples-queries?showall=&start=4
 
+https://bytescout.com/blog/20-important-sql-queries.html
+
 
 - Should i relate tables with PK and FK for joining queries ?  
 Not nesseceraliy ,There is no need to relate tables for joining tables by quesris. As long as the run queries with join settings the result would be the same. 
